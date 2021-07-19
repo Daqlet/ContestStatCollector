@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<table style="width:40%" border="1px">
+    <th>Contest</th>
+    <th><span th:text="${request.getHandle()}"/></th>
+    <tr>
+        <td>Total</td>
+        <td align="right" th:text="${request.getTotal()}"></td>
+    </tr>
+    <tr th:each="contest : ${ordered}">
+        <td th:text="${contest.getName()}"/>
+        <td align="right" th:text="${contests.get(contest.getId()).size()}"/>
+    </tr>
+
+</table>
+</body>
+</html>

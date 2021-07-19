@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello</title>
+</head>
+<body>
+<form method="POST" th:action="@{/cf}" th:object="${request}">
+  <label for="name">Enter name: </label>
+  <input type="text" th:field="*{handle}" id="name"/>
+  <br/>
+  <label for="count">Enter count of contests: </label>
+  <input type="number" th:field="*{count}" id="count"/>
+  <br/>
+  <input type="submit" value="GO"/>
+</form>
+</body>
+</html>
